@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Component 1</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#home" class="navbar-logo"><img class="logo" src="http://www.clker.com/cliparts/4/6/a/2/151763360658368674twitter-icon-square-logo-preview.hi.png" alt="Logo"></a>
+        <ul class="navbar-list">
+            <li><a class="first" href="#news">News</a></li>
+            <li><a class="second" href="#contact">Contact</a></li>
+        </ul>
+        <div class="profile-info">
+            <a class="userName" href="#name">Lakshit</a>
+            <img class="profile-image" src="https://w7.pngwing.com/pngs/893/926/png-transparent-silhouette-user-icon-profile-silhouette-silhouette-avatar-profile-silhouette-thumbnail.png" alt="Logo">
+        </div>
+    </div>
+
+    <div class="container">
+        <button onclick="onPrevious()" class="carousel-previous-btn"><<</button>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" id="carouselItem">
+        <button onclick="onNext()" class="carousel-next-btn">>></button>
+    </div>
+    </div>
+
+    <div class="footer">
+        <p>Thank You for visiting us. Have a good day!!</p>
+    </div>
+
+    <script>
+        var url1 = 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80';
+        var url2 = 'https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500';
+        var url3 = 'https://photographycourse.net/wp-content/uploads/2014/11/Landscape-Photography-steps.jpg';
+        var ar = [url1, url2, url3];
+        var i = 0;
+
+        function onStart() {
+            document.getElementById("carouselItem").src = ar[0];
+            i = 0;
+        }
+
+        function onNext() {
+            if (i >= 2) {
+                i == 0;
+                document.getElementById("carouselItem").src = ar[i];
+            } else {
+                document.getElementById("carouselItem").src = ar[++i];
+
+            }
+        }
+
+        function onPrevious() {
+            if (i <= 0) {
+                i == 2;
+                document.getElementById("carouselItem").src = ar[i];
+            } else {
+                document.getElementById("carouselItem").src = ar[--i];
+            }
+        }
+    </script>
+
+</body>
+
+</html>
