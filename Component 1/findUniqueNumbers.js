@@ -13,7 +13,7 @@ function unique(num){
 	return false;
 }
 
-for(let i=0;i<ar1.length;i++){
+for(let i=0;i<ar.length;i++){
 	for(let j=0;j<ar[0].length;j++){
     		if(unique(ar[i][j]))
           		console.log(ar[i][j]);
